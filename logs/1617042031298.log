@@ -1,0 +1,25 @@
+[20:20:31] [info] Started new express server on port: 5000
+[20:20:37] [info] GET ::1 /
+[20:20:37] [info] GET ::1 /styles/app.css
+[20:20:37] [info] GET ::1 /styles/forms.css
+[20:20:37] [info] GET ::1 /images/background.jpg
+[20:21:36] [info] GET ::1 /
+[20:21:36] [info] GET ::1 /styles/app.css
+[20:21:36] [info] GET ::1 /styles/forms.css
+[20:21:36] [info] GET ::1 /images/background.jpg
+[20:21:37] [info] GET ::1 /
+[20:21:37] [info] GET ::1 /styles/app.css
+[20:21:37] [info] GET ::1 /styles/forms.css
+[20:21:37] [info] GET ::1 /images/background.jpg
+[20:22:29] [info] GET ::1 /
+[20:22:29] [info] GET ::1 /styles/forms.css
+[20:22:29] [info] GET ::1 /styles/app.css
+[20:22:29] [info] GET ::1 /images/background.jpg
+[20:22:30] [info] GET ::1 /
+[20:22:30] [info] GET ::1 /styles/app.css
+[20:22:30] [info] GET ::1 /styles/forms.css
+[20:22:30] [info] GET ::1 /images/background.jpg
+[20:22:41] [info] GET ::1 /
+[20:22:41] [info] GET ::1 /styles/forms.css
+[20:22:41] [info] GET ::1 /styles/app.css
+[20:22:41] [info] GET ::1 /images/background.jpg

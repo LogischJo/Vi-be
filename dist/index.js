@@ -7,17 +7,24 @@ const express_1 = __importDefault(require("express"));
 const better_logging_1 = __importDefault(require("better-logging"));
 const dotenv_1 = require("dotenv");
 const path_1 = require("path");
-better_logging_1.default(console, { saveToFile: `./logs/${Date.now()}.log` });
 dotenv_1.config();
 const app = express_1.default();
 const port = process.env.PORT || 5000;
+// Custom console
+better_logging_1.default(console, { saveToFile: path_1.join(__dirname, '..', 'logs', `${Date.now()}.log`) }); // @ts-ignore
+app.use(better_logging_1.default.expressMiddleware(console));
 // Template engine
 app.set('view engine', 'ejs');
 app.use(express_1.default.static('public'));
 app.set('views', path_1.join(__dirname, '..', 'views'));
-// Navigation
-app.get('/:song', (req, res) => {
-    res.render('index', { song: req.params.song });
-    console.log('Server got:', req.params.song);
+app.get('/', (req, res) => {
+    res.render('index', { page: 'start' });
 });
+// app.get('/tracks/:track', (req, res) => {
+//   if (!req.params.track) res.sendStatus(400).json('Please provide track number.')
+//   res.set('content-type', 'audio/mp3')
+//   res.set('accept-ranges', 'bytes')
+//   const stream = createReadStream(join(__dirname, '..', 'public', 'songs', `${req.params.track}.mp3`), {autoClose: false, highWaterMark: 1 << 25, emitClose: false})
+//   stream.on('data', (chunk) => res.write(chunk))
+// })
 app.listen(port, () => console.info(`Started new express server on port: ${port}`));

@@ -1,0 +1,6 @@
+[18:05:03] [info] Started new express server on port: 5000
+[18:05:09] [info] GET ::1 /
+[18:05:10] [info] GET ::1 /app.css
+[18:05:24] [info] GET ::1 /tracks/3
+[18:05:24] [info] GET ::1 /tracks/3
+[18:05:24] [info] GET ::1 /favicon.ico

@@ -1,13 +1,14 @@
-[15:44:42] [info] Started new express server on port: 5000
-[15:45:02] [error] ReferenceError: C:\Users\Admin\Documents\Vi~Be\views\index.ejs:31
-    29| 
-    30|           <audio controls autoplay>
- >> 31|             <source src="<%= song %>.mp3" type="audio/mpeg">
-    32|           Your browser does not support the audio element.
-    33|           </audio>
-    34|     </div>
+[18:04:25] [info] Started new express server on port: 5000
+[18:04:36] [info] GET ::1 /
+[18:04:36] [error] ReferenceError: C:\Users\Admin\Documents\Vi~Be\views\index.ejs:11
+    9| </head>
+    10| <body>
+ >> 11|     <h1><%= track %></h1>
+    12|     <audio controls autoplay>
+    13|     <source src="<%= track %>" type="audio/mpeg">
+    14|     Your browser does not support the audio element.
 
-song is not defined
+track is not defined
     at eval (eval at compile (C:\Users\Admin\Documents\Vi~Be\node_modules\ejs\lib\ejs.js:662:12), <anonymous>:12:26)
     at index (C:\Users\Admin\Documents\Vi~Be\node_modules\ejs\lib\ejs.js:692:17)
     at tryHandleCache (C:\Users\Admin\Documents\Vi~Be\node_modules\ejs\lib\ejs.js:272:36)
@@ -16,5 +17,5 @@ song is not defined
     at tryRender (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\application.js:640:10)
     at Function.render (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\application.js:592:3)
     at ServerResponse.render (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\response.js:1012:7)
-    at C:\Users\Admin\Documents\Vi~Be\dist\index.js:20:9
+    at C:\Users\Admin\Documents\Vi~Be\dist\index.js:47:9
     at Layer.handle [as handle_request] (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\layer.js:95:5)

@@ -1,9 +1,0 @@
-[15:51:24] [info] Started new express server on port: 5000
-[15:51:24] [log] {"song":"1"}
-[15:51:24] [info] Detected!
-[15:51:25] [log] {"song":".mp3"}
-[15:51:25] [info] Detected!
-[15:51:26] [log] {"song":"1"}
-[15:51:26] [info] Detected!
-[15:51:26] [log] {"song":".mp3"}
-[15:51:26] [info] Detected!
