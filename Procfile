@@ -1,1 +1,1 @@
-worker: npm run enable
+web: npm run enable
