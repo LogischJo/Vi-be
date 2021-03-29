@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"alwaysStrict": true,
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"strictNullChecks": false,
+		"esModuleInterop": true,
+		//"incremental": true,
+		"target": "ES2020",
+		"lib": [
+			"ESNext"
+		],
+        "outDir": "dist",
+		"noImplicitAny": true,
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}

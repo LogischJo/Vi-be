@@ -1,0 +1,12 @@
+[14:15:04] [info] Started new express server on port: 5000
+[14:15:07] [error] Error: Failed to lookup view "../index" in views directory "C:\Users\Admin\Documents\Vi~Be\views"
+    at Function.render (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\application.js:580:17)
+    at ServerResponse.render (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\response.js:1012:7)
+    at C:\Users\Admin\Documents\Vi~Be\dist\index.js:17:9
+    at Layer.handle [as handle_request] (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\Admin\Documents\Vi~Be\node_modules\express\lib\router\index.js:275:10)

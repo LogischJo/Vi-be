@@ -1,0 +1,5 @@
+[15:59:16] [info] Started new express server on port: 5000
+[15:59:20] [log] Server got: 2
+[15:59:22] [log] Server got: favicon.ico
+[15:59:29] [log] Server got: 3
+[15:59:30] [log] Server got: favicon.ico
