@@ -37,6 +37,7 @@ body {
     box-shadow: 0 8px 32px 0 rgba(35, 41, 49, 1);
     backdrop-filter: blur(8.0px);
     -webkit-backdrop-filter: blur( 8.0px );
+    overflow: auto;
 }
 
 /* #app-bar {

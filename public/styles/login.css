@@ -45,9 +45,9 @@
 
 #app-logo {
     margin-top: 5rem;
-    margin-left: 8rem;
-    width: 12rem;
-    height: 12rem;
+    margin-left: calc((28rem - 24vh) / 2);
+    width: 24vh;
+    height: 24vh;
     -webkit-animation: breathing 8s ease-out infinite normal;
     animation: breathing 8s ease-out infinite normal;
 }
@@ -165,12 +165,77 @@
         align-content: center;
         border-radius: 0;
         border: none;
-        padding-left: calc(50vw - 14rem); /* Calculated by SkaneroOo */
+        padding-left: calc(50vw - 14rem);
+    }
+
+    #app-login #login {
+        margin-left: 8vw;
+    }
+
+    #app-login #register {
+        margin-left: 8vw;
+    }
+
+    #app-logo {
+        margin-top: calc(5rem - 24vh);
+    }
+
+    #app-login input[name="pass"] {
+        margin-top: 1rem;
     }
 }
 
-@media (pointer:none), (pointer:coarse) {
-    #app-login {
-        display: block;
+@media (max-height: 700px) {
+    #app-login .divider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@media (max-height: 550px) {
+    #app-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    #app-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    #app-login h1 {
+        font-size: 8vw;
+        margin-left: 10vw;
+    }
+
+    #app-login .divider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
     }
 }
