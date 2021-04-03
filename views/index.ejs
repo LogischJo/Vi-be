@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%- title %></title>
     <link href="/styles/global.css" rel="stylesheet" type="text/css" />
-    <link href="/styles/login.css" rel="stylesheet" type="text/css" />
     <link href="/styles/custom.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="/images/favicon.ico">
 </head>
 <body>
-    <% if (locals.stage) {%>
-        <%- include('components/'+stage) %>
-    <% } %>
+    <%- include('components/'+page) %>
 </body>
 </html>

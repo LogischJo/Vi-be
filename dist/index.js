@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 app.use(express_1.default.static('public'));
 app.set('views', path_1.join(__dirname, '..', 'views'));
 app.get('/', (req, res) => {
-    res.render('index', { stage: 'login', title: 'Vi~be • Login' });
+    res.render('index', { page: 'login', title: 'Vi~be • Login' });
 });
 app.post('/submit-login', (req, res) => {
     const login = req.body;

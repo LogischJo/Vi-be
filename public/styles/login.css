@@ -53,9 +53,9 @@
 }
 
 #app-login h1 {
-    font-size: 2rem;
     display: flex;
-    justify-content: center;
+    font-size: 2rem;
+    margin-left: 4rem;
     margin-bottom: 2.5rem;
 }
 
@@ -68,7 +68,7 @@
     background-color: var(--second-bg-color);
 }
 
-#app-login form {
+#app-login #login {
     display: flex;
     flex-direction: column;
     margin-left: 4rem;
@@ -128,4 +128,43 @@
     cursor: pointer;
     color: var(--main-text-color);
     background-color: var(--second-text-color);
+}
+
+#app-login #register {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+#app-login #register input {
+    margin-top: 0;
+    border: 1px solid var(--second-bg-color);
+    color: var(--second-bg-color);
+}
+
+#app-login #register input:hover {
+    cursor: pointer;
+    color: var(--main-text-color);
+    background-color: var(--second-bg-color);
+}
+
+@media all and (max-width: 700px) {
+    :root {
+        font-size: 12;
+    }
+
+    #app-login {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba( 35, 41, 49, 0.8 );
+        justify-content: center;
+        align-self: center;
+        align-content: center;
+        border-radius: 0;
+        border: none;
+        padding-left: calc(50vw - 14rem); /* Calculated by SkaneroOo */
+    }
 }

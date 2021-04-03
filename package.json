@@ -13,7 +13,7 @@
     "enable": "node dist/index.js",
     "prepare": "npm run lint && tsc --skipLibCheck",
     "github": "npm run lint && git add . && git commit -am 'Automatic push' && git push origin master",
-    "heroku:": "npm run lint && git add . && git commit -am 'Automatic push' && git push heroku master"
+    "heroku": "npm run lint && git add . && git commit -am 'Automatic push' && git push heroku master"
   },
   "author": "Znudzony <krzysztof.rapior@protonmail.com>",
   "license": "Apache-2.0",
