@@ -149,7 +149,7 @@
     background-color: var(--second-bg-color);
 }
 
-@media all and (max-width: 700px) {
+@media (max-width: 700px), (max-height: 770px) {
     :root {
         font-size: 12;
     }
@@ -166,5 +166,11 @@
         border-radius: 0;
         border: none;
         padding-left: calc(50vw - 14rem); /* Calculated by SkaneroOo */
+    }
+}
+
+@media (pointer:none), (pointer:coarse) {
+    #app-login {
+        display: block;
     }
 }
