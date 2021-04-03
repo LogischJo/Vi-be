@@ -7,6 +7,12 @@ config()
 const app = express()
 const port = process.env.PORT || 5000
 
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+)
+
 // Custom console
 logger(console, {saveToFile: join(__dirname, '..', 'logs', `${Date.now()}.log`)}) // @ts-ignore
 app.use(logger.expressMiddleware(console))
@@ -17,7 +23,11 @@ app.use(express.static('public'))
 app.set('views', join(__dirname, '..', 'views'))
 
 app.get('/', (req, res) => {
-  res.render('index', {page: 'start'})
+  res.render('index', {stage: 'login', title: 'Vi~be • Login'})
+})
+
+app.post('/submit-login', (req, res) => {
+  const login: {user: string; password: string} = req.body
 })
 
 // app.get('/tracks/:track', (req, res) => {

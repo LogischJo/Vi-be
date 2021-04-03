@@ -1,0 +1,131 @@
+@-webkit-keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+  
+@keyframes breathing {
+    0% {
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+#app-login {
+    width: 28rem;
+    height: 48rem;
+    background: rgba( 35, 41, 49, 0.8 );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#app-logo {
+    margin-top: 5rem;
+    margin-left: 8rem;
+    width: 12rem;
+    height: 12rem;
+    -webkit-animation: breathing 8s ease-out infinite normal;
+    animation: breathing 8s ease-out infinite normal;
+}
+
+#app-login h1 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+#app-login .divider {
+    position: relative;
+    left: 1rem;
+    margin-bottom: 2rem;
+    width: 26rem;
+    height: 1px;
+    background-color: var(--second-bg-color);
+}
+
+#app-login form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+}
+
+#app-login .ctx {
+    width: 20rem;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    border-bottom: 2px solid var(--main-text-color);
+    color: var(--main-text-color);
+    letter-spacing: 1;
+    font-size: 16px;
+    background: transparent;
+    opacity: 0.5;
+    border-radius: 0 0 3px 3px;
+}
+
+#app-login .ctx:focus {
+    color: var(--main-text-color);
+    opacity: 1;
+}
+
+#app-login input[name="user"] {
+    background-image: url('/images/user.svg');
+    background-position: 9px 10px;
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+}
+
+#app-login input[name="pass"] {
+    margin-top: 2rem;
+    background-image: url('/images/password.svg');
+    background-position: 9px 10px;
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+}
+
+#app-login input[type="submit"] {
+    margin-top: 3rem;
+    width: 20rem;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid var(--second-text-color);
+    color: var(--second-text-color);
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 1;
+    font-size: 16px;
+    border-radius: 0.5rem;
+    transition: background 0.25s ease;
+}
+
+#app-login input[type="submit"]:hover {
+    cursor: pointer;
+    color: var(--main-text-color);
+    background-color: var(--second-text-color);
+}

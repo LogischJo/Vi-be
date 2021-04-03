@@ -1,0 +1,22 @@
+.glassy {
+    background: rgba( 35, 41, 49, 0.5 );
+    backdrop-filter: blur( 8.0px );
+    -webkit-backdrop-filter: blur( 8.0px );
+    /* border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.center-inside {
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}

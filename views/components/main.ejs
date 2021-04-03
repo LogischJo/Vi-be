@@ -1,0 +1,12 @@
+<div id="app">
+    <section id="app-bar">
+        <img src="/images/logo.svg" alt="App logo" class="logo" />
+        <h1>Vi~be</h1>
+    </section>
+    <nav id="app-menu"></nav>
+    <main id="app-content">
+        <% if (locals.page) {%>
+            <%- include('components/'+page) %>
+        <% } %>
+    </main>
+</div>
