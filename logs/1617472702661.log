@@ -1,6 +1,0 @@
-[19:58:22] [info] Started new express server on port: 5000
-[19:58:33] [info] GET ::1 /
-[19:58:33] [info] GET ::1 /images/logo.svg
-[19:58:33] [info] GET ::1 /styles/global.css
-[19:58:33] [info] GET ::1 /styles/custom.css
-[19:58:33] [info] GET ::1 /images/background.jpg
