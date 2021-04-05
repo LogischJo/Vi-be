@@ -35,46 +35,29 @@
     }
 }
 
-#app-login {
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 28rem;
     height: 48rem;
-    background: rgba( 35, 41, 49, 0.8 );
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: auto;
+    margin-top: calc((100vh - 48rem) / 2);
 }
 
-#app-logo {
-    margin-top: 5rem;
-    margin-left: calc((28rem - 24vh) / 2);
+#logo {
     width: 24vh;
     height: 24vh;
+    margin-top: 5vh;
     -webkit-animation: breathing 8s ease-out infinite normal;
     animation: breathing 8s ease-out infinite normal;
 }
 
-#app-login h1 {
-    display: flex;
+h1 {
     font-size: 2rem;
-    margin-left: 4rem;
-    margin-bottom: 2.5rem;
 }
 
-#app-login .divider {
-    position: relative;
-    left: 1rem;
-    margin-bottom: 2rem;
-    width: 26rem;
-    height: 1px;
-    background-color: var(--second-bg-color);
-}
-
-#app-login #login {
-    display: flex;
-    flex-direction: column;
-    margin-left: 4rem;
-}
-
-#app-login .ctx {
+.ctx {
     width: 20rem;
     padding: 10px 20px;
     outline: none;
@@ -89,28 +72,30 @@
     border-radius: 0 0 3px 3px;
 }
 
-#app-login .ctx:focus {
+.ctx:nth-child(1n) {
+    margin-top: 2rem;
+}
+
+.ctx:focus {
     color: var(--main-text-color);
     opacity: 1;
 }
 
-#app-login input[name="user"] {
+input[name="user"] {
     background-image: url('/images/user.svg');
     background-position: 9px 10px;
     background-repeat: no-repeat;
     padding-left: 2.5rem;
 }
 
-#app-login input[name="pass"] {
-    margin-top: 2rem;
+input[name="pass"] {
     background-image: url('/images/password.svg');
     background-position: 9px 10px;
     background-repeat: no-repeat;
     padding-left: 2.5rem;
 }
 
-#app-login input[type="submit"] {
-    margin-top: 3rem;
+input[type="submit"] {
     width: 20rem;
     padding: 10px 20px;
     background: none;
@@ -124,95 +109,73 @@
     transition: background 0.25s ease;
 }
 
-#app-login input[type="submit"]:hover {
+input[type="submit"]:hover {
     cursor: pointer;
     color: var(--main-text-color);
     background-color: var(--second-text-color);
 }
 
-#app-login #register {
-    display: flex;
-    flex-direction: column;
-    margin-left: 4rem;
-    margin-top: 1rem;
+input[value="LOGIN"] {
+    margin-top: 3rem;
 }
 
-#app-login #register input {
-    margin-top: 0;
+input[value="OR REGISTER"] {
+    margin-top: 1rem;
     border: 1px solid var(--second-bg-color);
     color: var(--second-bg-color);
 }
 
-#app-login #register input:hover {
-    cursor: pointer;
+input[value="OR REGISTER"]:hover {
     color: var(--main-text-color);
     background-color: var(--second-bg-color);
 }
 
-@media (max-width: 700px), (max-height: 770px) {
+@media all and (min-height: 1150px) {
+    #content {
+        transform: scale(1.25);
+    }
+}
+
+@media all and (min-height: 1300px) {
+    #content {
+        transform: scale(1.5);
+    }
+}
+
+@media all and (min-height: 1450px) {
+    #content {
+        transform: scale(1.75);
+    }
+}
+
+@media all and (min-height: 1600px) {
+    #content {
+        transform: scale(2);
+    }
+}
+
+@media all and (max-width: 768px), (max-height: 920px) {
     :root {
         font-size: 12;
     }
 
-    #app-login {
-        display: flex;
-        flex-direction: column;
+    #content {
         width: 100vw;
         height: 100vh;
-        background: rgba( 35, 41, 49, 0.8 );
-        justify-content: center;
-        align-self: center;
-        align-content: center;
-        border-radius: 0;
+        margin: 0;
         border: none;
-        padding-left: calc(50vw - 14rem);
+        border-radius: 0;
+        transform: scale(1.25);
+        box-shadow: none;
     }
 
-    #app-login #login {
-        margin-left: 8vw;
-    }
-
-    #app-login #register {
-        margin-left: 8vw;
-    }
-
-    #app-logo {
-        margin-top: calc(5rem - 24vh);
-    }
-
-    #app-login input[name="pass"] {
-        margin-top: 1rem;
+    #logo {
+        margin-top: calc(24vh - 5rem);
     }
 }
 
-@media (max-height: 700px) {
-    #app-login .divider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-}
-
-@media (max-height: 550px) {
-    #app-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        width: 0;
-        height: 0;
-        opacity: 0;
-    }
-}
-
-@media (max-width: 400px) {
-    #app-logo {
+@media all and (max-height: 768px) {
+    #logo {
         position: absolute;
         top: 0;
         left: 0;
@@ -223,19 +186,55 @@
         opacity: 0;
     }
 
-    #app-login h1 {
+    #content {
+        padding-top: calc(24vh - 5rem);
+    }
+}
+
+@media all and (max-width: 428px) {
+    #logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    #content {
+        padding-top: calc(24vh - 5rem);
+        transform: scale(1);
+    }
+
+    h1 {
         font-size: 8vw;
-        margin-left: 10vw;
     }
+}
 
-    #app-login .divider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        width: 0;
-        height: 0;
-        opacity: 0;
+@media all and (max-width: 320px) {
+    #content {
+        transform: scale(0.9);
+    }
+}
+
+@media all and (max-width: 290px) {
+    #content {
+        transform: scale(0.9);
+    }
+}
+
+@media all and (min-height: 1081px) {
+    #logo {
+        width: 18vh;
+        height: 18vh;
+    }
+}
+
+@media all and (min-height: 1500px) {
+    #logo {
+        width: 16vh;
+        height: 16vh;
     }
 }

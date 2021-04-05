@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
   res.render('index', {page: 'login', title: 'Vi~be • Login'})
 })
 
+app.get('/test', (req, res) => {
+  res.render('login')
+})
+
 app.post('/submit-login', (req, res) => {
   const login: {user: string; password: string} = req.body
 })
