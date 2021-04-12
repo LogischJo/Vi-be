@@ -1,7 +1,6 @@
 {
   "name": "vi-be",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/index.js",
   "engines": {
     "node": "15.x",
