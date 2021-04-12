@@ -30,6 +30,8 @@ body {
     background-repeat: repeat;
     animation: wonder 50s linear infinite;
     animation-timing-function: linear;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 #cover {

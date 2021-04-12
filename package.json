@@ -12,8 +12,8 @@
     "lint": "npx prettier --write src && npx eslint src --ext .ts --fix",
     "enable": "node dist/index.js",
     "prepare": "npm run lint && tsc --skipLibCheck",
-    "github": "npm run lint && git add . && git commit -am 'Automatic push' && git push origin master",
-    "heroku": "npm run lint && git add . && git commit -am 'Automatic push' && git push heroku master"
+    "github": "npm run lint && git add . && git commit -m 'Automatic push' && git push origin master",
+    "heroku": "npm run lint && git add . && git commit -m 'Automatic push' && git push heroku master"
   },
   "author": "Znudzony <krzysztof.rapior@protonmail.com>",
   "license": "Apache-2.0",
@@ -22,7 +22,8 @@
     "better-logging": "^4.5.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ytdl-core": "^4.5.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
