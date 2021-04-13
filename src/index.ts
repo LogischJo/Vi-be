@@ -4,16 +4,32 @@ import {config} from 'dotenv'
 import {join} from 'path'
 import {createReadStream} from 'fs'
 import ytdl from 'ytdl-core'
+import {connect} from 'mongoose'
+import bcrypt from 'bcrypt'
+import userDB from './models/user'
 config()
 
 const app = express()
 const port = process.env.PORT || 5000
+app.use(express.urlencoded({extended: true}))
 
-app.use(
-  express.urlencoded({
-    extended: true
-  })
-)
+// MongoDB
+const connectWithDatabase = async () => {
+  try {
+    await connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false
+    })
+
+    console.info('Successfully connected with Mongo database!')
+  } catch (e) {
+    console.error(`Failed to connect with Mongo database, reason: ${e}`)
+    process.exit(1)
+  }
+}
+
+connectWithDatabase()
 
 // Custom console
 logger(console, {saveToFile: join(__dirname, '..', 'logs', `${Date.now()}.log`)}) // @ts-ignore
@@ -24,12 +40,23 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.set('views', join(__dirname, '..', 'views'))
 
-app.get('/', (req, res) => {
-  res.render('login')
+app.get('/', (req, res) => res.render('login'))
+
+app.get('/register', (req, res) => res.render('register', {extra: '✖ This username is already used.'}))
+
+app.post('/login', (req, res) => {
+  const {user, pass}: {user: string; pass: string} = req.body
 })
 
-app.post('/submit-login', (req, res) => {
-  const login: {user: string; password: string} = req.body
+app.post('/register', async (req, res) => {
+  const {user, pass, key}: {user: string; pass: string; key: string} = req.body
+
+  const exist = await userDB.findOne({username: user}, {}, {lean: true})
+  if (exist) return res.render('register', {error: '✖ This username is already used.'})
+
+  try {
+    const hashedPass = await bcrypt.hash(pass, 10)
+  } catch {}
 })
 
 app.get('/tracks/:track', (req, res) => {

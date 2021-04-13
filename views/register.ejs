@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vi~be • Login</title>
+    <title>Vi~be • Register</title>
     <link href="/styles/global.css" rel="stylesheet" type="text/css" />
     <link href="/styles/auth.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="/images/favicon.ico">
@@ -15,18 +15,24 @@
     <div id="cover">
         <section id="content" class="glassy">
             <img src="/images/logo.svg" alt="App logo" id="logo" />
-            <h1>Log in to continue</h1>
-            <form method="POST" action="/login" id="main">
+            <h1>Create new account</h1>
+            <form method="POST" action="/register" id="main">
+                <% if (locals.extra) { %>
+                    <div id="extra-check"><p id="extra"><%= locals.extra %></p></div>
+                <% } %>
                 <div id="user-check" class="validate"></div>
                 <input type="text" class="ctx" id="user" name="user" placeholder="USERNAME" autocomplete="off" required />
                 <br />
                 <div id="pass-check" class="validate"></div>
                 <input type="password" class="ctx" id="pass" name="pass" placeholder="PASSWORD" autocomplete="off" required />
                 <br />
-                <input type="submit" value="LOGIN" />
+                <div id="key-check" class="validate"></div>
+                <input type="text" class="ctx" id="key" name="key" placeholder="ADMIN KEY" autocomplete="off" required />
+                <br />
+                <input type="submit" value="REGISTER" />
             </form>
-            <form method="GET" action="/register" id="second">
-                <input type="submit" value="OR REGISTER"/>
+            <form method="GET" action="/" id="second">
+                <input type="submit" value="BACK TO LOGIN"/>
             </form>
         </section>
     </div>

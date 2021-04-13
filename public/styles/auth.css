@@ -81,6 +81,13 @@ h1 {
     opacity: 1;
 }
 
+input[name="key"] {
+    background-image: url('/images/adminKey.svg');
+    background-position: 9px 10px;
+    background-repeat: no-repeat;
+    padding-left: 2.5rem;
+}
+
 input[name="user"] {
     background-image: url('/images/user.svg');
     background-position: 9px 10px;
@@ -96,6 +103,7 @@ input[name="pass"] {
 }
 
 input[type="submit"] {
+    margin-top: 2rem;
     width: 20rem;
     padding: 10px 20px;
     background: none;
@@ -109,25 +117,36 @@ input[type="submit"] {
     transition: background 0.25s ease;
 }
 
-input[type="submit"]:hover {
+#main input[type="submit"]:hover {
     cursor: pointer;
     color: var(--main-text-color);
     background-color: var(--second-text-color);
 }
 
-input[value="LOGIN"] {
-    margin-top: 3rem;
-}
-
-input[value="OR REGISTER"] {
+#second input[type="submit"] {
     margin-top: 1rem;
     border: 1px solid var(--second-bg-color);
     color: var(--second-bg-color);
 }
 
-input[value="OR REGISTER"]:hover {
+#second input[type="submit"]:hover {
     color: var(--main-text-color);
     background-color: var(--second-bg-color);
+}
+
+.validate {
+    display: none;
+    position: absolute;
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+    color: var(--error-color);
+}
+
+#extra-check {
+    display: none;
+    position: absolute;
+    margin-left: 0.75rem;
+    margin-top: -1rem;
 }
 
 @media all and (min-height: 1150px) {
@@ -214,14 +233,14 @@ input[value="OR REGISTER"]:hover {
 }
 
 @media all and (max-width: 320px) {
-    #content {
+    #content form {
         transform: scale(0.9);
     }
 }
 
 @media all and (max-width: 290px) {
-    #content {
-        transform: scale(0.9);
+    #content form {
+        transform: scale(0.8);
     }
 }
 
