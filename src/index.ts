@@ -13,6 +13,7 @@ const app = express()
 const port = process.env.PORT || 5000
 app.use(express.urlencoded({extended: true}))
 
+
 // MongoDB
 const connectWithDatabase = async () => {
   try {
@@ -42,7 +43,7 @@ app.set('views', join(__dirname, '..', 'views'))
 
 app.get('/', (req, res) => res.render('login'))
 
-app.get('/register', (req, res) => res.render('register', {extra: '✖ This username is already used.'}))
+app.get('/register', (req, res) => res.render('register'))
 
 app.post('/login', (req, res) => {
   const {user, pass}: {user: string; pass: string} = req.body
@@ -51,11 +52,20 @@ app.post('/login', (req, res) => {
 app.post('/register', async (req, res) => {
   const {user, pass, key}: {user: string; pass: string; key: string} = req.body
 
+  if (key !== process.env.ADMIN_KEY) return res.render('register', {error: '✖ Provided key is invalid.'})
+
   const exist = await userDB.findOne({username: user}, {}, {lean: true})
   if (exist) return res.render('register', {error: '✖ This username is already used.'})
 
   try {
     const hashedPass = await bcrypt.hash(pass, 10)
+
+    userDB.create({
+      username: user,
+      password: hashedPass,
+      creationDate: Math.round(Date.now() / 1000 / 60)
+    })
+
   } catch {}
 })
 
