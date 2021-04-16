@@ -16,7 +16,10 @@
         <section id="content" class="glassy">
             <img src="/images/logo.svg" alt="App logo" id="logo" />
             <h1>Log in to continue</h1>
-            <form method="POST" action="/login" id="main">
+            <form method="POST" action="/" id="main">
+                <% if (locals.extra) { %>
+                    <div id="extra-check"><p id="extra"><%= locals.extra %></p></div>
+                <% } %>
                 <div id="user-check" class="validate"></div>
                 <input type="text" class="ctx" id="user" name="user" placeholder="USERNAME" autocomplete="off" required />
                 <br />
